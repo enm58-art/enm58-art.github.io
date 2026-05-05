@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #111111;
+            --accent: #0071e3; /* Apple-style blue */
+            --muted: #86868b;
+            --card-bg: #f5f5f7;
+            --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* --- Navigation --- */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            z-index: 100;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            margin-left: 24px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding: 100px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+
+        .hero-text p {
+            font-size: 1.5rem;
+            color: var(--muted);
+            margin-bottom: 32px;
+        }
+
+        .hero-image-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image {
+            width: 320px;
+            height: 320px;
+            border-radius: 24px;
+            object-fit: cover;
+            background-color: var(--card-bg);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        /* --- Work Section --- */
+        #work {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        /* --- Contact Section --- */
+        #contact {
+            padding: 100px 0;
+            text-align: center;
+            background-color: #fafafa;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--text);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 24px;
+            transition: opacity 0.2s;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+
+        /* --- Footer --- */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--muted);
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 60px 0;
+            }
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+            .hero-image {
+                width: 240px;
+                height: 240px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-content">
+            <a href="#" class="logo">MyBrand</a>
+            <div class="nav-links">
+                <a href="#work">Work</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="hero">
+            <div class="hero-text">
+                <h1>Crafting digital experiences.</h1>
+                <p>Strategic thinker and creative professional based in [City].</p>
+                <a href="#contact" class="btn">Get in touch</a>
+            </div>
+            <div class="hero-image-container">
+                <img src="Assets/ProfilePic.jpeg" alt="Profile Photo" class="hero-image">
+            </div>
+        </header>
+
+        <section id="work">
+            <h2 class="section-title">Selected Work</h2>
+            <div class="grid">
+                <div class="project-card">
+                    <h3>Project One</h3>
+                    <p>Brief description of a significant project you led, focusing on results and technology used.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Project Two</h3>
+                    <p>A secondary project showcasing a different skill set or industry experience.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Project Three</h3>
+                    <p>Highlighting a creative or technical achievement that solved a specific problem.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" style="padding: 80px 0; border-top: 1px solid #eee;">
+            <h2 class="section-title">About</h2>
+            <div style="max-width: 600px; color: var(--muted); font-size: 1.1rem;">
+                <p>I have spent the last [X] years developing a deep understanding of [Your Industry]. My approach is centered on efficiency, modern design, and building lasting value through code and strategy.</p>
+                <p style="margin-top: 20px;">When I'm not at my desk, you'll find me [Hobby] or exploring new ways to integrate technology into everyday life.</p>
+            </div>
+        </section>
+    </div>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Let's build something together.</h2>
+            <p>I am currently open to new opportunities and collaborations.</p>
+            <a href="mailto:hello@yourname.com" class="btn">Send an Email</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
