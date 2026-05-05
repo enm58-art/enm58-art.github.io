@@ -3,184 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ethan Mathias | Portfolio</title>
+    <title>Ethan Mathias | Portfolio & Quiz</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --midnight-blue: #1a3a5f;
-            --accent-blue: #2980b9;
-            --soft-yellow: #fef9e7; /* Light yellow background */
-            --white: #ffffff;
-            --text-dark: #2c3e50;
-        }
-
-        * { box-sizing: border-box; scroll-behavior: smooth; }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--soft-yellow);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: var(--midnight-blue);
-            color: var(--white);
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .profile-pic {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            border: 4px solid var(--white);
-            object-fit: cover;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
-        h1 { margin: 10px 0; font-size: 2.5rem; }
-        .contact-info { font-size: 0.9rem; opacity: 0.9; margin-bottom: 20px; }
-        .contact-info a { color: var(--white); text-decoration: none; margin: 0 10px; border-bottom: 1px solid transparent; }
-        .contact-info a:hover { border-bottom: 1px solid var(--white); }
-
-        nav {
-            background: var(--white);
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            z-index: 1000;
-        }
-
-        nav a { text-decoration: none; color: var(--midnight-blue); font-weight: 600; }
-        nav a:hover { color: var(--accent-blue); }
-
-        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-
-        section { 
-            background: var(--white); 
-            padding: 30px; 
-            border-radius: 8px; 
-            margin-bottom: 40px; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-
-        h2 { color: var(--midnight-blue); border-bottom: 2px solid var(--soft-yellow); padding-bottom: 10px; margin-top: 0; }
-
-        .exp-item { margin-bottom: 25px; }
-        .exp-header { display: flex; justify-content: space-between; font-weight: 700; color: var(--midnight-blue); }
-        .exp-sub { font-style: italic; color: var(--text-dark); margin-bottom: 10px; }
-        
-        ul { padding-left: 20px; }
-        li { margin-bottom: 8px; }
-
-        .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .skill-cat { font-weight: bold; color: var(--midnight-blue); }
-
-        footer { text-align: center; padding: 40px; font-size: 0.8rem; color: var(--midnight-blue); }
-    </style>
 </head>
 <body>
 
-    <header>
-        <img src="Assets/ProfilePic.jpeg" alt="Ethan Mathias" class="profile-pic">
-        <h1>Ethan Mathias</h1>
-        <div class="contact-info">
-            ethan.mathias@rutgers.edu | 908-696-6190 | Basking Ridge, NJ
-            <br><br>
-            <a href="https://www.linkedin.com/in/ethanmathias">LinkedIn</a>
+    <div id="profile-view">
+        <header style="background-color: #1a3a5f; color: white; padding: 60px 20px; text-align: center;">
+            <img src="Assets/ProfilePic.jpeg" alt="Ethan Mathias" style="width: 150px; height: 150px; border-radius: 50%; border: 4px solid white; margin-bottom: 20px;">
+            <h1>Ethan Mathias</h1>
+            <p>ethan.mathias@rutgers.edu | Basking Ridge, NJ</p>
+            <button onclick="startQuiz()" style="background: #fef9e7; color: #1a3a5f; border: none; padding: 10px 20px; border-radius: 20px; font-weight: bold; cursor: pointer; margin-top: 15px;">
+                Take the Resume Quiz 🔥
+            </button>
+        </header>
+
+        <div style="max-width: 800px; margin: 0 auto; padding: 40px 20px;">
+            <section>
+                <h2 style="color: #1a3a5f; border-bottom: 2px solid #1a3a5f;">Education</h2>
+                <p><strong>Rutgers University</strong> - B.S. in Accounting (GPA: 3.3)</p>
+                <p><strong>Ridge High School</strong> - Honor Roll & Fencing State Champion (2023)</p>
+            </section>
+
+            <section style="margin-top: 30px;">
+                <h2 style="color: #1a3a5f; border-bottom: 2px solid #1a3a5f;">Experience</h2>
+                <p><strong>Wellness Gala</strong> - Business Intern</p>
+                <p><strong>Fund for the Aid of Hearing & Vision Impairments</strong> - Co-founder & Chairman</p>
+                <p><strong>Lenny's Trattoria</strong> - Customer Service Associate</p>
+            </section>
         </div>
-    </header>
-
-    <nav>
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-    </nav>
-
-    <div class="container">
-        <section id="education">
-            <h2>Education</h2>
-            <div class="exp-item">
-                <div class="exp-header">
-                    <span>Rutgers University</span>
-                    <span>May 2027</span>
-                </div>
-                <div class="exp-sub">B.S. in Accounting, Minor in Psychology | GPA: 3.3/4.0</div>
-                <p><strong>Relevant Coursework:</strong> Microeconomics, Business Statistics, Financial Accounting, Media Psychology</p>
-            </div>
-            <div class="exp-item">
-                <div class="exp-header">
-                    <span>Ridge High School</span>
-                    <span>June 2023</span>
-                </div>
-                <p>Honor Roll, 4x Varsity Player (Fencing), 2023 State Champion</p>
-            </div>
-        </section>
-
-        <section id="experience">
-            <h2>Professional Experience</h2>
-            
-            <div class="exp-item">
-                <div class="exp-header">
-                    <span>Wellness Gala Internship - Business Intern</span>
-                    <span>May 2025 - Present</span>
-                </div>
-                <ul>
-                    <li>Coordinated growth through email campaigns reaching 2000+ new customers.</li>
-                    <li>Led marketing team in social media campaigns across Instagram, LinkedIn, and Facebook.</li>
-                    <li>Solved financial complications regarding events, communicating directly with vendors.</li>
-                </ul>
-            </div>
-
-            <div class="exp-item">
-                <div class="exp-header">
-                    <span>Fund for the Aid of Hearing & Vision Impairments</span>
-                    <span>2020 - 2024</span>
-                </div>
-                <div class="exp-sub">Co-founder and Chairman</div>
-                <ul>
-                    <li>Established 501(c)(3) nonprofit raising $5,000 for outreach programs.</li>
-                    <li>Led 20+ students in project management and fundraising across four high schools.</li>
-                </ul>
-            </div>
-
-            <div class="exp-item">
-                <div class="exp-header">
-                    <span>Lenny's Trattoria - Customer Service</span>
-                    <span>2023 - 2024</span>
-                </div>
-                <ul>
-                    <li>Proposed and assisted in the launch of a delivery service, expanding customer reach.</li>
-                    <li>Supervised and trained new employees in collaboration with management.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="skills">
-            <h2>Skills & Interests</h2>
-            <div class="skills-grid">
-                <div>
-                    <p><span class="skill-cat">Technical:</span> JavaScript, R Studio, HTML, Microsoft Office, Wix, Adobe Express</p>
-                    <p><span class="skill-cat">Languages:</span> English (Native), ASL (Intermediate), French (Basic)</p>
-                </div>
-                <div>
-                    <p><span class="skill-cat">Interests:</span> NBA, Formula 1, Macroeconomics (Stock Market / Interest Rates)</p>
-                </div>
-            </div>
-        </section>
     </div>
 
-    <footer>
-        &copy; 2026 Ethan Mathias. Built with HTML/CSS.
-    </footer>
+    <div id="quiz-view" class="quiz-container" style="display: none;">
+        <div class="stats-bar">
+            <div class="stat-pill">Score: <span id="current-score">0</span></div>
+            <div class="stat-pill streak">🔥 <span id="current-streak">0</span></div>
+        </div>
+        
+        <div class="progress-wrapper">
+            <div class="progress-fill" id="progress-bar"></div>
+        </div>
 
+        <header class="quiz-header">
+            <img src="Assets/ProfilePic.jpeg" alt="Ethan Mathias" class="profile-pic">
+            <h1 id="question-text">Loading Quiz...</h1>
+        </header>
+
+        <div id="options-container" class="options-grid"></div>
+        <div id="feedback-area" class="feedback-msg"></div>
+
+        <div id="result-screen" class="hidden">
+            <h2>Challenge Complete!</h2>
+            <p id="final-stats"></p>
+            <button onclick="location.reload()" class="restart-btn">Back to Profile</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        function startQuiz() {
+            document.getElementById('profile-view').style.display = 'none';
+            document.getElementById('quiz-view').style.display = 'block';
+            // app.js will handle the rest once this view is visible
+        }
+    </script>
 </body>
 </html>
