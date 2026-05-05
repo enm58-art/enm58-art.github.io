@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethan Mathias | Resume Challenge</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="quiz-container">
+        <div class="stats-bar">
+            <div class="stat-pill">Score: <span id="current-score">0</span></div>
+            <div class="stat-pill streak">🔥 <span id="current-streak">0</span></div>
+        </div>
+        
+        <div class="progress-wrapper">
+            <div class="progress-fill" id="progress-bar"></div>
+        </div>
+
+        <header class="quiz-header">
+            <img src="Assets/ProfilePic.jpeg" alt="Ethan Mathias" class="profile-pic">
+            <h1 id="question-text">Loading Ethan's Resume Data...</h1>
+        </header>
+
+        <div id="options-container" class="options-grid"></div>
+
+        <div id="feedback-area" class="feedback-msg"></div>
+
+        <div id="result-screen" class="hidden">
+            <h2>Challenge Complete!</h2>
+            <p id="final-stats"></p>
+            <button onclick="location.reload()" class="restart-btn">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

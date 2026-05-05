@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "question": "What is Ethan's major at Rutgers University?",
+    "options": ["Finance", "Accounting", "Economics", "Psychology"],
+    "answer": "Accounting"
+  },
+  {
+    "id": 2,
+    "question": "What is Ethan's current cumulative GPA?",
+    "options": ["3.0", "3.1", "3.3", "3.5"],
+    "answer": "3.3"
+  },
+  {
+    "id": 3,
+    "question": "Which specific internship did Ethan start in May 2025?",
+    "options": ["Wellness Gala", "Hearing Doctors of NJ", "Lenny's Trattoria", "RECONS"],
+    "answer": "Wellness Gala"
+  },
+  {
+    "id": 4,
+    "question": "Ethan co-founded a 501(c)(3) dedicated to which cause?",
+    "options": ["Youth Sports", "Animal Rescue", "Hearing & Vision Impairments", "Environmental Aid"],
+    "answer": "Hearing & Vision Impairments"
+  },
+  {
+    "id": 5,
+    "question": "How many new customers did Ethan reach through email campaigns at his internship?",
+    "options": ["500+", "1,000+", "2,000+", "5,000+"],
+    "answer": "2,000+"
+  },
+  {
+    "id": 6,
+    "question": "In 2023, Ethan contributed to a State Championship win in which sport?",
+    "options": ["Tennis", "Fencing", "Soccer", "Basketball"],
+    "answer": "Fencing"
+  },
+  {
+    "id": 7,
+    "question": "What was the total amount raised by Ethan's non-profit organization?",
+    "options": ["$1,000", "$2,500", "$5,000", "$10,000"],
+    "answer": "$5,000"
+  },
+  {
+    "id": 8,
+    "question": "At Lenny's Trattoria, what service did Ethan propose and help launch?",
+    "options": ["Catering Service", "Delivery Service", "Online Ordering", "Outdoor Dining"],
+    "answer": "Delivery Service"
+  },
+  {
+    "id": 9,
+    "question": "Ethan is a member of RECONS at Rutgers. What does RECONS stand for?",
+    "options": ["Rutgers Economic Council", "Rutgers Economists Society", "Real Estate Consultants", "Research Economics Society"],
+    "answer": "Rutgers Economists Society"
+  },
+  {
+    "id": 10,
+    "question": "Which programming/technical skill is listed on Ethan's resume?",
+    "options": ["Python", "JavaScript", "C++", "SQL"],
+    "answer": "JavaScript"
+  }
+]

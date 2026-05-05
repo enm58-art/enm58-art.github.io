@@ -1,0 +1,104 @@
+/* Variable Definitions for consistency */
+:root {
+    --midnight-blue: #1a3a5f;
+    --accent-blue: #2980b9;
+    --light-yellow: #fef9e7;
+    --white: #ffffff;
+    --success-green: #2ecc71;
+    --error-red: #e74c3c;
+    --text-dark: #2c3e50;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--light-yellow);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--text-dark);
+}
+
+.quiz-container {
+    background: var(--white);
+    width: 95%;
+    max-width: 500px;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(26, 58, 95, 0.15);
+    text-align: center;
+    position: relative;
+}
+
+/* Stats and Progress */
+.stats-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.stat-pill {
+    background: var(--light-yellow);
+    padding: 6px 15px;
+    border-radius: 20px;
+    border: 1px solid var(--midnight-blue);
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--midnight-blue);
+}
+
+.stat-pill.streak {
+    border-color: #f39c12;
+    color: #d35400;
+}
+
+.progress-wrapper {
+    height: 8px;
+    background: #edf2f7;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--midnight-blue);
+    width: 0%; /* Updated by JS */
+    transition: width 0.4s ease;
+}
+
+/* Header and Image */
+.profile-pic {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid var(--midnight-blue);
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 1.4rem;
+    color: var(--midnight-blue);
+    margin-bottom: 1.5rem;
+}
+
+/* Options Grid */
+.options-grid {
+    display: grid;
+    gap: 12px;
+}
+
+.option-btn {
+    padding: 14px;
+    background: var(--white);
+    border: 2px solid var(--midnight-blue);
+    border-radius: 12px;
+    color: var(--midnight-blue);
+    font-weight: 600;
+    font-size: 1rem
